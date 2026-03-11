@@ -13,3 +13,14 @@
   margin-top: 2rem;
   padding-bottom: 1rem;
 }
+
+.bmc-link {
+  color: $buttonColor;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

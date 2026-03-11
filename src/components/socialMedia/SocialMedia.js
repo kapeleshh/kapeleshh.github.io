@@ -44,6 +44,19 @@ export default function socialMedia() {
         </a>
       ) : null}
 
+      {socialMediaLinks.scholar ? (
+        <a
+          href={socialMediaLinks.scholar}
+          className="icon-button google"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Google Scholar"
+        >
+          <i className="fas fa-graduation-cap"></i>
+          <span></span>
+        </a>
+      ) : null}
+
       {socialMediaLinks.gitlab ? (
         <a
           href={socialMediaLinks.gitlab}

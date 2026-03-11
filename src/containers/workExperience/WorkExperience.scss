@@ -1,27 +1,140 @@
-.experience-cards-div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1rem 1rem;
-}
+@import "../../_globalColor";
 
 .experience-heading {
   font-size: 56px;
   font-weight: 400;
+  margin-bottom: 2rem;
 }
 
 .experience-container {
-  display: flex;
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+  margin: 2rem auto 0 auto;
 }
 
-.experience-container > * {
+/* ── Timeline layout ── */
+
+.experience-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+
+  /* vertical line */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.65rem;
+    top: 0.4rem;
+    bottom: 0;
+    width: 2px;
+    background: $buttonColor;
+    opacity: 0.35;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.05rem;
+  top: 1.1rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: $buttonColor;
+  border: 2px solid $lightBackground1;
+  z-index: 1;
+}
+
+.timeline-card {
+  background: $lightBackground2;
+  border: 1px solid $lightBorder1;
+  border-radius: 10px;
+  box-shadow: $lightBoxShadowDark 0px 6px 20px -12px;
+  padding: 1.4rem 1.6rem 1.2rem;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: $lightBoxShadowDark 0px 14px 24px -8px;
+  }
+}
+
+.timeline-card-dark {
+  background: $darkBackground;
+}
+
+.timeline-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-company-logo {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 8px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: $lightBackground1;
+  padding: 3px;
+}
+
+.timeline-meta {
   flex: 1;
 }
 
-/* Media Query */
+.timeline-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $textColor;
+  margin: 0 0 0.15rem;
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $buttonColor;
+  margin: 0 0 0.2rem;
+}
+
+.timeline-date {
+  font-size: 0.82rem;
+  color: $subTitle;
+  font-weight: 500;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: $subTitle;
+  margin: 0.4rem 0 0.6rem;
+  line-height: 1.5;
+}
+
+.timeline-bullets {
+  margin: 0.2rem 0 0 1rem;
+  padding: 0;
+  list-style: disc;
+
+  li {
+    font-size: 0.88rem;
+    color: $subTitle;
+    line-height: 1.55;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.dark-mode-text {
+  color: $textColorDark !important;
+}
+
+/* ── Responsive ── */
 
 @media (max-width: 1380px) {
   .experience-heading {
@@ -33,5 +146,17 @@
   .experience-heading {
     font-size: 30px;
     text-align: center;
+  }
+
+  .experience-timeline {
+    padding-left: 1.8rem;
+  }
+
+  .timeline-dot {
+    left: -1.55rem;
+  }
+
+  .timeline-role {
+    font-size: 1rem;
   }
 }
