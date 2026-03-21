@@ -23,10 +23,10 @@ const greeting = {
   username: "kapeleshh",
   title: "Hi, I'm Kapeleshh KS",
   subTitle: emoji(
-    "AI Engineer with 5+ years at the intersection of biotech, robotics & AI 🚀 — shipping production systems in computer vision, EEG/signal ML, LLM applications, and edge deployment (AWS, Jetson)."
+    "AI Agents | LLM | Neuro Tech | Edge AI | CI/CD | Deep Learning | Computer Vision"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1m8C0hvhwYRcZFykEbWDOCtzR7E4aIhpp/view?usp=sharing",
+    "https://drive.google.com/file/d/1RfSLL5fIpMLjQqcbmY7eZkoH5kx2BCgz/view?usp=sharing",
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -47,8 +47,11 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I do",
   subTitle:
-    "AI ENGINEER SPECIALIZING IN COMPUTER VISION, EEG/SIGNAL ML, AND LLM SYSTEMS",
+    "I ship production ready AI Agents, EEG/Signal Processing, Computer Vision solutions and LLM SYSTEMS",
   skills: [
+    emoji(
+      "⚡ Build LLM-powered applications: multilingual STT→summarization with speaker diarization, semantic search, RAG pipelines, and transformer-based NLP."
+    ),
     emoji(
       "⚡ Architect & ship end-to-end AI products — drug discovery pipelines, LLM meeting summarization, anomaly diagnosis — from prototype to cloud/edge production (AWS, Jetson)"
     ),
@@ -57,9 +60,6 @@ const skillsSection = {
     ),
     emoji(
       "⚡ Develop EEG/biosignal ML systems for mental health detection, cognitive aging research, and epilepsy diagnosis — with published peer-reviewed results"
-    ),
-    emoji(
-      "⚡ Build LLM-powered applications: multilingual STT→summarization with speaker diarization, semantic search, RAG pipelines, and transformer-based NLP for Japanese text"
     )
   ],
 
@@ -123,7 +123,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Indian Institute of Technology Madras (IITM)",
-      logo: require("./assets/images/harvardLogo.png"),
+      logo: require("./assets/images/IIT_Madras_Logo.svg.png"),
       subHeader: "Dual Degree (B.Tech + M.Tech) in Biological Engineering",
       duration: "2015 – 2020",
       desc: "",
@@ -131,7 +131,7 @@ const educationInfo = {
     },
     {
       schoolName: "Korea Advanced Institute of Science and Technology (KAIST)",
-      logo: require("./assets/images/stanfordLogo.png"),
+      logo: require("./assets/images/KAIST_logo.svg.png"),
       subHeader: "Semester Abroad in Bio and Brain Engineering",
       duration: "August 2018 – December 2018",
       desc: "",
@@ -156,68 +156,70 @@ const workExperiences = {
     {
       role: "AI Engineer — AI & Digital Business Development",
       company: "Macnica, Japan",
-      companylogo: require("./assets/images/facebookLogo.png"),
+      companylogo: require("./assets/images/macnica_logo.png"),
       date: "May 2022 – Present",
       desc: "Building production-grade AI systems at the intersection of computer vision, EEG/signal ML, LLM applications, and cloud/edge deployment for industrial partners across Japan.",
       descBullets: [
-        "Built a data ingestion pipeline converting 30+ years of drug discovery R&D documents (PDFs, PPTs, Excel, chemical structures) into a centralized searchable knowledge base using OCR, OSR, and rule-based heuristics",
-        "Implemented semantic textual similarity engine using transformer-based models for Japanese text to detect duplicate entries for fraud detection",
-        "Delivered multi-language speech-to-text + LLM summarization pipeline with speaker diarization and cross-language translation for accurate, speaker-aware meeting summaries",
-        "Optimized CI/CD pipeline for AI deployments: identified flaky tests, vulnerabilities, and integration issues; strengthened reliability via targeted unit and integration testing",
-        "Streamlined multi-tenant AWS operations, improving infrastructure consistency and scalability; resolved UI/UX inconsistencies to enhance product reliability",
-        "Improved object detection performance for traffic signs, vehicles, license plates, and faces by fine-tuning CNN-based pipelines for ADAS anonymization and accuracy",
-        "Created a statistical root-cause diagnosis system to analyze anomalies in autonomous heavy machinery, reducing downtime from interoperability issues",
-        "Drove EEG-based research on cognitive aging and brain connectivity for MCI patients using the LEMON dataset — co-authored a peer-reviewed publication at APSIPA 2024",
-        "Built EEG and physiological-marker based mental health detection system for early signs of depression and stress in working adults (BMK Center, Hiroshima University partnership)",
-        "Engineered real-time RSVP EEG classification system decoding 100–120 images/min for high-speed visual cognition experiments"
-      ]
+          "RAG Knowledge Base for Drug Discovery: Architected an ETL + embedding pipeline ingesting 30+ years of R&D assets (PDFs, PPTs, Excel, chemical structures) into a vector-searchable knowledge base, cutting researcher retrieval time from hours to seconds.(OCR, LangChain, embeddings, AWS S3)",
+          "Multilingual Meeting Intelligence Agent: Designed and deployed an end-to-end STT -> diarization -> LLM summarization pipeline with speaker attribution and action-item extraction, supporting English/Japanese cross-language workflows. (Whisper, pyannote, Transformers, FastAPI)",
+          "CI/CD Hardening for AI Services: Identified systemic flaky-test and integration gaps from production failure signals; introduced targeted unit/integration tests and security gates, measurably reducing failed deploys and rollback frequency. (GitHub Actions, Docker, AWS)",
+          "Multi-Tenant AWS Infrastructure: Standardized cloud architecture across tenant environments and resolved critical UI/UX defects, accelerating new tenant onboarding and improving platform reliability. (AWS Lambda, S3, CloudWatch)",
+          "Privacy-First Video Anonymization: Fine-tuned YOLOv8 for face and license-plate detection with post-processing blur; packaged for edge inference on roadway datasets to meet compliance requirements. (PyTorch, OpenCV, TensorRT)",
+          "Japanese Fraud/Duplicate Detection: Built a semantic textual similarity system for Japanese-language duplicate and fraud detection using transformer-based sentence embeddings, deployed as a production API.(Sentence-Transformers, Japanese tokenizers, FastAPI)",
+          "Anomaly RCA for Autonomous Heavy Machinery: Engineered a telemetry ingestion and statistical root-cause analysis system for interoperability faults, reducing unplanned downtime for autonomous machinery fleets. (Pandas, scikit-learn, time-series analytics)",
+          "EEG Cognitive Aging Research (APSIPA 2024): Led EEG connectivity analysis on the LEMON dataset; published findings on cognitive resilience and aging at APSIPA ASC 2024. (MNE-Python, graph connectivity)",
+          "Mental Health Detection (BMK Center, Hiroshima University): Built a deep learning pipeline fusing EEG and physiological markers for early-stage depression and stress detection. (PyTorch, signal processing)",
+          "Real-Time RSVP EEG Classification: Engineered a real-time EEG inference system processing 100--120 images/min, accelerating stimulus-response tagging throughput for cognitive experiments by3x times vs. manual labeling. (EEG, real-time inference, Python)",
+          "Enzyme Reaction Atom Mapping for Drug Discovery (Tech Lead): Architected a graph neural network system for reactant-to-product atom mapping, training GCN, GIN, and GraphSAGE backbones alongside transformer-based models on 15,000+ enzyme reactions; achieved 97% accuracy via a novel Weisfeiler-Lehman graph hashing framework that correctly resolves chemically equivalent atoms, outperforming standard evaluation metrics.(PyTorch, PyTorch Geometric, RDKit)",
+          "LLM Agentic Pipeline for Reaction Explainability: Built a modular LangGraph pipeline integrating GNN-based atom mapping with multimodal LLMs to auto-generate step-by-step mechanistic explanations of chemical reactions — covering bond changes, electron flow, and product prediction with annotated visual diffs. Engineered a provider-agnostic architecture supporting Gemini, GPT-4o, and local Ollama with auto-retry quality validation. (LangGraph, RDKit, Gemini/GPT-4o)"
+            ]
     },
     {
       role: "AI Product Developer",
       company: "Bipolar Factory, India",
-      companylogo: require("./assets/images/quoraLogo.png"),
+      companylogo: require("./assets/images/bpf_logo.png"),
       date: "2020 – 2022",
       desc: "Prototyped and deployed AI/ML products for edge devices and industrial automation in the Indian market.",
       descBullets: [
-        "Prototyped a deployable drowsiness detection system using Jetson Nano + GPS for fatigue monitoring in Indian logistics fleets, issuing real-time alerts during highway transit",
-        "Designed and deployed a machine vision system for automated defect detection in precision automotive components, improving classification accuracy on the assembly line",
-        "Engineered an EEG-based epilepsy detection pipeline using Quantitative EEG (QEEG) metrics — extracted spectral, amplitude, and connectivity features benchmarked against normative statistical datasets to identify abnormal neurological patterns"
+        "Edge Driver Drowsiness Detection: Designed and deployed a real-time fatigue detection system on Jetson Nano + GPS for logistics fleets; achieved sub-100ms inference latency with TensorRT-optimized models for highway transit safety. (PyTorch, OpenCV, TensorRT, ONNX)",
+        "Automotive Defect Detection: Built and deployed a machine-vision defect classification system for precision automotive parts, improving on-line quality control accuracy and reducing manual inspection overhead. (CV, deep learning, scikit-learn)"
       ]
     },
     {
       role: "Master's Thesis Researcher",
       company: "IIT Madras — Rehabilitation Bioengineering Group",
-      companylogo: require("./assets/images/harvardLogo.png"),
+      companylogo: require("./assets/images/rbg_logo.png"),
       date: "May 2019 – Jul 2020",
       desc: "Guide: Dr. Venkatesh Balasubramanian. Conducted statewide analysis of Pediatric Resuscitation Emergency Medical (PREM) services in collaboration with the State Health Ministry.",
       descBullets: [
-        "Performed stratified demographic analysis and assessed treatment timelines, resuscitation outcomes, and referral trends across public hospitals",
-        "Led comorbidity-treatment association study using multivariate statistics to inform standardization of emergency medical protocols",
-        "Collaborated directly with State Health Ministry to evaluate emergency care delivery at a system level"
+        "Conducted the first statewide data-driven audit of Pediatric Resuscitation Emergency Medical (PREM) services in collaboration with the Tamil Nadu State Health Ministry, covering multiple public hospital networks}.",
+        "Designed and executed a stratified demographic analysis pipeline — cleaning, merging, and analyzing structured EHR and referral records — to surface disparities in response timelines, survival outcomes, and inter-hospital transfer patterns.",
+        "Applied multivariate statistical modelling (logistic regression, comorbidity association analysis) to identify protocol gaps; findings directly informed state-level emergency care standardization recommendations."
       ]
     },
     {
       role: "Summer Research Intern",
       company: "ICHIT, Taipei Medical University",
-      companylogo: require("./assets/images/googleAssistant.svg"),
+      companylogo: require("./assets/images/tmu_logo.svg.png"),
       date: "Jun 2019 – Jul 2019",
       desc: "Research internship under Dr. Yu-Chuan Jack Li and Dr. Shabbir Syed-Abdul at the International Center for Health Information Technology (ICHIT).",
       descBullets: [
-        "Developed a deep learning-based risk prediction tool for Chronic Kidney Disease (CKD) using CNNs on Taiwan's EHR claims data, achieving 0.95 AUROC for 12-month onset prediction",
-        "Visualized feature saliency using gradient attribution maps to enhance interpretability for clinical decision-making support",
-        "Co-authored peer-reviewed publication in Healthcare (MDPI) 2021"
+        "Built a deep learning risk stratification model for Chronic Kidney Disease (CKD) onset prediction using longitudinal Taiwan National Health Insurance claims data (100k+ patient records); achieved 0.95 AUROC for 12-month onset — results published in Healthcare (MDPI, 2021).",
+        "Applied gradient-based attribution maps (saliency/GradCAM) to surface clinically interpretable risk factors, enabling physician validation of model decisions and supporting regulatory review.",
+        "Collaborated in an international research team across Taiwan and India, delivering a complete ML pipeline — data preprocessing, model training, evaluation, and clinical reporting — within a 6-week internship."
       ]
     },
     {
       role: "Director and COO",
       company: "Eufloria Marketing, India",
-      companylogo: require("./assets/images/airbnbLogo.png"),
+      companylogo: require("./assets/images/budsnstrings_logo.jpg"),
       date: "2016 – 2018",
       desc: "Founded and scaled a tech-enabled B2B cut-flower fair-price marketplace from the ground up.",
       descBullets: [
-        "Onboarded 50+ farmers and delivered daily supply to 70+ retailers across 4 states within 6 months",
-        "Achieved 95%+ on-time delivery rate and reduced spoilage losses by 40% through streamlined logistics and vendor operations",
-        "Pivoted operating model from farm-to-retail to farm-to-weddings, increasing gross margins by 2.3x through long-term high-value client contracts"
+        "Founded a tech-enabled B2B agri-marketplace connecting flower farmers directly to retailers, eliminating 2--3 middlemen layers and establishing fair-price discovery for both ends of the supply chain.",
+        "Scaled from zero to 50+ farmer partners and 70+ retail clients across 4 states within 6 months by building a demand-aggregation model and standardized grading/packaging protocols.",
+        "Owned end-to-end operations — logistics routing, cold-chain vendor management, and payment reconciliation — achieving a 95%+ on-time delivery rate and cutting post-harvest spoilage losses by 40%.",
+        "Identified a higher-margin vertical and executed a strategic pivot to \textbf{farm-to-weddings} (bulk event contracts), growing gross margins by \textbf{2.3$\times$} and reducing revenue volatility through longer-term commitments."
       ]
     }
   ]
@@ -238,22 +240,31 @@ const bigProjects = {
   subtitle: "AI/ML PROJECTS AND RESEARCH TOOLS I'VE BUILT AND OPEN-SOURCED",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Cookify — Multimodal Recipe Extraction",
+      projectName: "KashU — Cross-Platform Investment Portfolio Tracker",
       projectDesc:
-        "End-to-end multimodal pipeline that converts cooking videos into structured JSON recipes by fusing CV + ASR + NLP signals. Features YOLOv8, Whisper, spaCy, and modular Python architecture.",
+        "Shipped a production-grade Flutter app targeting 6 platforms (iOS, Android, Web, macOS, Linux, Windows) from a single Dart codebase; designed a feature-first clean architecture with repository pattern, service abstraction layer, and Riverpod dependency injection. Built a multi-source price aggregation engine routing 8 asset types across 3 APIs (Yahoo Finance, CoinGecko, Open Exchange Rates) through a unified PriceService interface with 30-minute in-memory caching and rate-limit-aware request spacing. Engineered a multi-step commodity pricing pipeline and solved Flutter Web CORS restrictions by building a custom Python 3 proxy server with host whitelisting and OPTIONS preflight handling. Stack: Flutter/Dart 3, Riverpod 2, Hive NoSQL, fl_chart, Yahoo Finance, CoinGecko, Open Exchange Rates, Python 3",
       footerLink: [
         {
           name: "GitHub Repository",
-          url: "https://github.com/kapeleshh/cookify"
+          url: "https://github.com/kapeleshh/kashU"
         }
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Tree-Based Sokoban Planner (LLM Planning)",
+      projectName: "Personal Fitness Coach — AI-Powered Health Analytics Platform",
       projectDesc:
-        "End-to-end planning system integrating Mistral-7B with tree search (A*, MCTS, Beam, Adaptive) to solve 155 Sokoban puzzles. Features multi-agent framework with 6 collaborating AI personas.",
+        "Architected a full-stack health intelligence platform ingesting real Garmin biometric data (35+ metrics/day: sleep stages, HRV, body battery, stress, respiration) via a dual-path pipeline — live OAuth sync through Garmin Connect API and a manual export parser. Built a Python statistical analytics engine implementing Pearson correlation matrices across 12 metrics, time-lagged cross-correlations, score anomaly detection with Bessel's correction, personal percentile baselines, and 7-day rolling trend analysis — all served via a 14-endpoint REST API. Designed a composite health score algorithm and a workout readiness predictor with rule-based insight generation and a chat interface architected for LLM drop-in replacement. Shipped a Flutter frontend with 7 screens deployed to Web with iOS/Android ready from a single codebase. Stack: Python 3.12, Flutter/Dart 3, Provider, fl_chart, Syncfusion Charts, Garmin Connect API (OAuth/garth)",
+      footerLink: [
+        {
+          name: "GitHub Repository",
+          url: "https://github.com/kapeleshh/fitness_coach"
+        }
+      ]
+    },
+    {
+      projectName: "LLM Planning Agent — Tree-Search Sokoban Solver",
+      projectDesc:
+        "Integrated Mistral-7B with tree-search algorithms (A*, MCTS, Beam, Adaptive) to solve 155 Sokoban puzzles across 10 difficulty levels, benchmarking LLM planning under combinatorial constraints. Built a multi-agent framework with 6 collaborating AI personas, consensus building, self-improvement loops, and real-time strategy adaptation. Delivered a production-ready research platform: modular Python system with pluggable LLM backends, automated tests, comprehensive CLI, and visualization dashboards for constraint-based LLM planning. Stack: Python, Mistral-7B, Transformers, NetworkX, FastAPI, PyTest",
       footerLink: [
         {
           name: "GitHub Repository",
@@ -262,10 +273,9 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Quantitative EEG Analysis Toolkit",
+      projectName: "qEEG Analysis Toolkit",
       projectDesc:
-        "Comprehensive qEEG package with modules for preprocessing, spectral analysis, epileptiform detection, and ML classification. Supports research in ADHD, anxiety, autism, and depression.",
+        "Built a production-ready quantitative EEG package with modules for preprocessing, spectral analysis, epileptiform detection, and ML classification — supporting ADHD, anxiety, autism, and depression research. Shipped with Dockerized deployment, CLI, automated tests, and full docs; implemented biomedical algorithms including theta/beta ratio, frontal asymmetry, Brodmann area mapping, and real-time ICA artifact removal. Stack: Python, MNE-Python, scikit-learn, SciPy, Docker, pytest, Sphinx, PyWavelets, NiBabel, NiLearn",
       footerLink: [
         {
           name: "GitHub Repository",
@@ -290,7 +300,7 @@ const achievementSection = {
       title: "APSIPA ASC 2024 — First Author",
       subtitle:
         "Exploring Brain Connectivity Patterns and Cognitive Resilience in Aging: A Study with the LEMON Dataset. Published in APSIPA ASC 2024.",
-      image: require("./assets/images/codeInLogo.webp"),
+      image: require("./assets/images/apsipa_logo.png"),
       imageAlt: "APSIPA 2024 Publication",
       footerLink: [
         {
@@ -303,7 +313,7 @@ const achievementSection = {
       title: "Healthcare MDPI 2021 — Co-Author",
       subtitle:
         "Machine learning prediction models for chronic kidney disease using national health insurance claim data in Taiwan. Published in Healthcare (MDPI) 2021.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
+      image: require("./assets/images/mdpi_logo.png"),
       imageAlt: "Healthcare MDPI Publication",
       footerLink: [
         {
@@ -316,7 +326,7 @@ const achievementSection = {
       title: "IEEE EMBS 2024 — Poster Presentation",
       subtitle:
         "Label Distribution Learning for Memory Decline: A Deep Learning Approach Using EEG Analysis. Presented at IEEE EMBS 2024.",
-      image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/embs_logo.png"),
       imageAlt: "IEEE EMBS 2024 Poster",
       footerLink: [
         {
