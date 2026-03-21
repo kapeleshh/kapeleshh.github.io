@@ -1,134 +1,226 @@
 @import "../../_globalColor";
 
+/* ── Section heading ── */
+
 .experience-heading {
   font-size: 56px;
   font-weight: 400;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .experience-container {
   width: 90%;
+  max-width: 900px;
   padding: 20px 10px;
   margin: 2rem auto 0 auto;
 }
 
-/* ── Timeline layout ── */
+/* ══════════════════════════════════════
+   TIMELINE — flex row per item
+   [year+dot column] | [card column]
+══════════════════════════════════════ */
 
 .experience-timeline {
   position: relative;
-  padding-left: 2.5rem;
 
-  /* vertical line */
+  /* vertical spine drawn behind all items */
   &::before {
     content: "";
     position: absolute;
-    left: 0.65rem;
-    top: 0.4rem;
+    /* spine sits in the centre of the tl-left column (80px wide) */
+    left: 56px;
+    top: 28px;
     bottom: 0;
-    width: 2px;
-    background: $buttonColor;
-    opacity: 0.35;
+    width: 3px;
+    background: linear-gradient(
+      to bottom,
+      $buttonColor 0%,
+      rgba($buttonColor, 0.12) 100%
+    );
+    border-radius: 2px;
+    z-index: 0;
   }
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 2.5rem;
+/* ── Each row ── */
+
+.tl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 2.8rem;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.timeline-dot {
-  position: absolute;
-  left: -2.05rem;
-  top: 1.1rem;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: $buttonColor;
-  border: 2px solid $lightBackground1;
+/* ── Left gutter: year label + dot ── */
+
+.tl-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;          /* fixed gutter width */
+  flex-shrink: 0;
+  padding-top: 14px;
+  position: relative;
   z-index: 1;
 }
 
-.timeline-card {
-  background: $lightBackground2;
-  border: 1px solid $lightBorder1;
-  border-radius: 10px;
-  box-shadow: $lightBoxShadowDark 0px 6px 20px -12px;
-  padding: 1.4rem 1.6rem 1.2rem;
-  transition: box-shadow 0.2s ease;
+.tl-year {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $buttonColor;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  margin-bottom: 6px;
+  text-align: center;
+}
 
-  &:hover {
-    box-shadow: $lightBoxShadowDark 0px 14px 24px -8px;
+.tl-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: $buttonColor;
+  border: 3px solid $lightBackground1;
+  box-shadow: 0 0 0 2px $buttonColor;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+
+  .tl-item:hover & {
+    transform: scale(1.35);
   }
 }
 
-.timeline-card-dark {
-  background: $darkBackground;
+/* ── Card ── */
+
+.tl-card {
+  flex: 1;
+  background: $lightBackground2;
+  border: 1px solid $lightBorder1;
+  border-radius: 12px;
+  box-shadow: $lightBoxShadowDark 0px 6px 24px -10px;
+  padding: 1.4rem 1.6rem 1.2rem;
+  margin-left: 1.2rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: $lightBoxShadowDark 0px 16px 32px -8px;
+    transform: translateY(-2px);
+  }
 }
 
-.timeline-card-header {
+.tl-card-dark {
+  background: $darkBackground;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Card header: logo + meta ── */
+
+.tl-header {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
-.timeline-company-logo {
-  width: 3.2rem;
-  height: 3.2rem;
+.tl-logo {
+  width: 3.4rem;
+  height: 3.4rem;
   border-radius: 8px;
   object-fit: contain;
   flex-shrink: 0;
-  background: $lightBackground1;
-  padding: 3px;
+  background: $lightBackground3;
+  padding: 4px;
+  border: 1px solid $lightBorder1;
 }
 
-.timeline-meta {
+.tl-meta {
   flex: 1;
+  min-width: 0;
 }
 
-.timeline-role {
-  font-size: 1.1rem;
+.tl-role {
+  font-size: 1.05rem;
   font-weight: 700;
   color: $textColor;
-  margin: 0 0 0.15rem;
+  margin: 0 0 0.18rem;
+  line-height: 1.3;
 }
 
-.timeline-company {
-  font-size: 0.95rem;
+.tl-company {
+  font-size: 0.92rem;
   font-weight: 600;
   color: $buttonColor;
-  margin: 0 0 0.2rem;
+  margin: 0 0 0.22rem;
 }
 
-.timeline-date {
-  font-size: 0.82rem;
+.tl-date {
+  font-size: 0.8rem;
   color: $subTitle;
   font-weight: 500;
 }
 
-.timeline-desc {
-  font-size: 0.9rem;
+/* ── Description paragraph ── */
+
+.tl-desc {
+  font-size: 0.88rem;
   color: $subTitle;
-  margin: 0.4rem 0 0.6rem;
-  line-height: 1.5;
+  margin: 0.3rem 0 0.5rem;
+  line-height: 1.55;
+  border-left: 3px solid rgba($buttonColor, 0.3);
+  padding-left: 0.75rem;
 }
 
-.timeline-bullets {
-  margin: 0.2rem 0 0 1rem;
-  padding: 0;
-  list-style: disc;
+/* ── Collapsible bullets ── */
 
-  li {
-    font-size: 0.88rem;
-    color: $subTitle;
-    line-height: 1.55;
-    margin-bottom: 0.3rem;
+.tl-bullets-section {
+  margin-top: 0.5rem;
+}
+
+.tl-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $buttonColor;
+  padding: 0.2rem 0;
+  letter-spacing: 0.02em;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.75;
   }
 }
+
+.tl-bullets {
+  margin: 0.6rem 0 0 1rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    font-size: 0.86rem;
+    color: $subTitle;
+    line-height: 1.6;
+    margin-bottom: 0.45rem;
+    padding-left: 1.1rem;
+
+    &::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: $buttonColor;
+      font-size: 0.75rem;
+      top: 0.05rem;
+    }
+  }
+}
+
+/* ── Dark mode overrides ── */
 
 .dark-mode-text {
   color: $textColorDark !important;
@@ -145,18 +237,53 @@
 @media (max-width: 768px) {
   .experience-heading {
     font-size: 30px;
-    text-align: center;
   }
 
-  .experience-timeline {
-    padding-left: 1.8rem;
+  .experience-container {
+    width: 95%;
   }
 
-  .timeline-dot {
-    left: -1.55rem;
+  .tl-left {
+    width: 56px;
   }
 
-  .timeline-role {
-    font-size: 1rem;
+  .experience-timeline::before {
+    left: 38px;
+  }
+
+  .tl-year {
+    font-size: 0.72rem;
+  }
+
+  .tl-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .tl-role {
+    font-size: 0.95rem;
+  }
+
+  .tl-logo {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .tl-card {
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tl-left {
+    display: none;
+  }
+
+  .experience-timeline::before {
+    display: none;
+  }
+
+  .tl-card {
+    margin-left: 0;
   }
 }
