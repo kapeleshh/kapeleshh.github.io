@@ -10,24 +10,30 @@ export default function WorkExperience() {
 
   if (!workExperiences.display) return null;
 
-  const toggle = i =>
-    setExpanded(prev => ({...prev, [i]: !prev[i]}));
+  const toggle = i => setExpanded(prev => ({...prev, [i]: !prev[i]}));
 
   return (
     <div id="experience">
       <Fade bottom duration={1000} distance="20px">
         <div className="experience-container" id="workExperience">
-          <h1 className={isDark ? "experience-heading dark-mode-text" : "experience-heading"}>
+          <h1
+            className={
+              isDark
+                ? "experience-heading dark-mode-text"
+                : "experience-heading"
+            }
+          >
             Professional Experience
           </h1>
 
           <div className="experience-timeline">
             {workExperiences.experience.map((card, i) => (
               <div className="tl-item" key={i}>
-
                 {/* Left gutter: year + dot */}
                 <div className="tl-left">
-                  <span className={isDark ? "tl-year dark-mode-text" : "tl-year"}>
+                  <span
+                    className={isDark ? "tl-year dark-mode-text" : "tl-year"}
+                  >
                     {(card.date.match(/\d{4}/) || [""])[0]}
                   </span>
                   <div className="tl-dot" />
@@ -43,11 +49,19 @@ export default function WorkExperience() {
                       alt={card.company}
                     />
                     <div className="tl-meta">
-                      <h3 className={isDark ? "tl-role dark-mode-text" : "tl-role"}>
+                      <h3
+                        className={
+                          isDark ? "tl-role dark-mode-text" : "tl-role"
+                        }
+                      >
                         {card.role}
                       </h3>
                       <p className="tl-company">{card.company}</p>
-                      <span className={isDark ? "tl-date dark-mode-text" : "tl-date"}>
+                      <span
+                        className={
+                          isDark ? "tl-date dark-mode-text" : "tl-date"
+                        }
+                      >
                         📅 {card.date}
                       </span>
                     </div>
@@ -55,7 +69,9 @@ export default function WorkExperience() {
 
                   {/* Description */}
                   {card.desc && (
-                    <p className={isDark ? "tl-desc dark-mode-text" : "tl-desc"}>
+                    <p
+                      className={isDark ? "tl-desc dark-mode-text" : "tl-desc"}
+                    >
                       {card.desc}
                     </p>
                   )}
@@ -64,7 +80,9 @@ export default function WorkExperience() {
                   {card.descBullets && card.descBullets.length > 0 && (
                     <div className="tl-bullets-section">
                       <button
-                        className={isDark ? "tl-toggle dark-mode-text" : "tl-toggle"}
+                        className={
+                          isDark ? "tl-toggle dark-mode-text" : "tl-toggle"
+                        }
                         onClick={() => toggle(i)}
                         aria-expanded={!!expanded[i]}
                       >

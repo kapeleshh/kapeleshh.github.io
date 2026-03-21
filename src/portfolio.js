@@ -36,8 +36,7 @@ const socialMediaLinks = {
   github: "https://github.com/kapeleshh",
   linkedin: "https://www.linkedin.com/in/kapeleshh",
   gmail: "kapeleshh@gmail.com",
-  scholar:
-    "https://scholar.google.com/citations?user=mXiuuq4AAAAJ&hl=en",
+  scholar: "https://scholar.google.com/citations?user=mXiuuq4AAAAJ&hl=en",
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
 };
@@ -160,19 +159,19 @@ const workExperiences = {
       date: "May 2022 – Present",
       desc: "Building production-grade AI systems at the intersection of computer vision, EEG/signal ML, LLM applications, and cloud/edge deployment for industrial partners across Japan.",
       descBullets: [
-          "RAG Knowledge Base for Drug Discovery: Architected an ETL + embedding pipeline ingesting 30+ years of R&D assets (PDFs, PPTs, Excel, chemical structures) into a vector-searchable knowledge base, cutting researcher retrieval time from hours to seconds.(OCR, LangChain, embeddings, AWS S3)",
-          "Multilingual Meeting Intelligence Agent: Designed and deployed an end-to-end STT -> diarization -> LLM summarization pipeline with speaker attribution and action-item extraction, supporting English/Japanese cross-language workflows. (Whisper, pyannote, Transformers, FastAPI)",
-          "CI/CD Hardening for AI Services: Identified systemic flaky-test and integration gaps from production failure signals; introduced targeted unit/integration tests and security gates, measurably reducing failed deploys and rollback frequency. (GitHub Actions, Docker, AWS)",
-          "Multi-Tenant AWS Infrastructure: Standardized cloud architecture across tenant environments and resolved critical UI/UX defects, accelerating new tenant onboarding and improving platform reliability. (AWS Lambda, S3, CloudWatch)",
-          "Privacy-First Video Anonymization: Fine-tuned YOLOv8 for face and license-plate detection with post-processing blur; packaged for edge inference on roadway datasets to meet compliance requirements. (PyTorch, OpenCV, TensorRT)",
-          "Japanese Fraud/Duplicate Detection: Built a semantic textual similarity system for Japanese-language duplicate and fraud detection using transformer-based sentence embeddings, deployed as a production API.(Sentence-Transformers, Japanese tokenizers, FastAPI)",
-          "Anomaly RCA for Autonomous Heavy Machinery: Engineered a telemetry ingestion and statistical root-cause analysis system for interoperability faults, reducing unplanned downtime for autonomous machinery fleets. (Pandas, scikit-learn, time-series analytics)",
-          "EEG Cognitive Aging Research (APSIPA 2024): Led EEG connectivity analysis on the LEMON dataset; published findings on cognitive resilience and aging at APSIPA ASC 2024. (MNE-Python, graph connectivity)",
-          "Mental Health Detection (BMK Center, Hiroshima University): Built a deep learning pipeline fusing EEG and physiological markers for early-stage depression and stress detection. (PyTorch, signal processing)",
-          "Real-Time RSVP EEG Classification: Engineered a real-time EEG inference system processing 100--120 images/min, accelerating stimulus-response tagging throughput for cognitive experiments by3x times vs. manual labeling. (EEG, real-time inference, Python)",
-          "Enzyme Reaction Atom Mapping for Drug Discovery (Tech Lead): Architected a graph neural network system for reactant-to-product atom mapping, training GCN, GIN, and GraphSAGE backbones alongside transformer-based models on 15,000+ enzyme reactions; achieved 97% accuracy via a novel Weisfeiler-Lehman graph hashing framework that correctly resolves chemically equivalent atoms, outperforming standard evaluation metrics.(PyTorch, PyTorch Geometric, RDKit)",
-          "LLM Agentic Pipeline for Reaction Explainability: Built a modular LangGraph pipeline integrating GNN-based atom mapping with multimodal LLMs to auto-generate step-by-step mechanistic explanations of chemical reactions — covering bond changes, electron flow, and product prediction with annotated visual diffs. Engineered a provider-agnostic architecture supporting Gemini, GPT-4o, and local Ollama with auto-retry quality validation. (LangGraph, RDKit, Gemini/GPT-4o)"
-            ]
+        "RAG Knowledge Base for Drug Discovery: Architected an ETL + embedding pipeline ingesting 30+ years of R&D assets (PDFs, PPTs, Excel, chemical structures) into a vector-searchable knowledge base, cutting researcher retrieval time from hours to seconds.(OCR, LangChain, embeddings, AWS S3)",
+        "Multilingual Meeting Intelligence Agent: Designed and deployed an end-to-end STT -> diarization -> LLM summarization pipeline with speaker attribution and action-item extraction, supporting English/Japanese cross-language workflows. (Whisper, pyannote, Transformers, FastAPI)",
+        "CI/CD Hardening for AI Services: Identified systemic flaky-test and integration gaps from production failure signals; introduced targeted unit/integration tests and security gates, measurably reducing failed deploys and rollback frequency. (GitHub Actions, Docker, AWS)",
+        "Multi-Tenant AWS Infrastructure: Standardized cloud architecture across tenant environments and resolved critical UI/UX defects, accelerating new tenant onboarding and improving platform reliability. (AWS Lambda, S3, CloudWatch)",
+        "Privacy-First Video Anonymization: Fine-tuned YOLOv8 for face and license-plate detection with post-processing blur; packaged for edge inference on roadway datasets to meet compliance requirements. (PyTorch, OpenCV, TensorRT)",
+        "Japanese Fraud/Duplicate Detection: Built a semantic textual similarity system for Japanese-language duplicate and fraud detection using transformer-based sentence embeddings, deployed as a production API.(Sentence-Transformers, Japanese tokenizers, FastAPI)",
+        "Anomaly RCA for Autonomous Heavy Machinery: Engineered a telemetry ingestion and statistical root-cause analysis system for interoperability faults, reducing unplanned downtime for autonomous machinery fleets. (Pandas, scikit-learn, time-series analytics)",
+        "EEG Cognitive Aging Research (APSIPA 2024): Led EEG connectivity analysis on the LEMON dataset; published findings on cognitive resilience and aging at APSIPA ASC 2024. (MNE-Python, graph connectivity)",
+        "Mental Health Detection (BMK Center, Hiroshima University): Built a deep learning pipeline fusing EEG and physiological markers for early-stage depression and stress detection. (PyTorch, signal processing)",
+        "Real-Time RSVP EEG Classification: Engineered a real-time EEG inference system processing 100--120 images/min, accelerating stimulus-response tagging throughput for cognitive experiments by3x times vs. manual labeling. (EEG, real-time inference, Python)",
+        "Enzyme Reaction Atom Mapping for Drug Discovery (Tech Lead): Architected a graph neural network system for reactant-to-product atom mapping, training GCN, GIN, and GraphSAGE backbones alongside transformer-based models on 15,000+ enzyme reactions; achieved 97% accuracy via a novel Weisfeiler-Lehman graph hashing framework that correctly resolves chemically equivalent atoms, outperforming standard evaluation metrics.(PyTorch, PyTorch Geometric, RDKit)",
+        "LLM Agentic Pipeline for Reaction Explainability: Built a modular LangGraph pipeline integrating GNN-based atom mapping with multimodal LLMs to auto-generate step-by-step mechanistic explanations of chemical reactions — covering bond changes, electron flow, and product prediction with annotated visual diffs. Engineered a provider-agnostic architecture supporting Gemini, GPT-4o, and local Ollama with auto-retry quality validation. (LangGraph, RDKit, Gemini/GPT-4o)"
+      ]
     },
     {
       role: "AI Product Developer",
@@ -251,7 +250,8 @@ const bigProjects = {
       ]
     },
     {
-      projectName: "Personal Fitness Coach — AI-Powered Health Analytics Platform",
+      projectName:
+        "Personal Fitness Coach — AI-Powered Health Analytics Platform",
       projectDesc:
         "Architected a full-stack health intelligence platform ingesting real Garmin biometric data (35+ metrics/day: sleep stages, HRV, body battery, stress, respiration) via a dual-path pipeline — live OAuth sync through Garmin Connect API and a manual export parser. Built a Python statistical analytics engine implementing Pearson correlation matrices across 12 metrics, time-lagged cross-correlations, score anomaly detection with Bessel's correction, personal percentile baselines, and 7-day rolling trend analysis — all served via a 14-endpoint REST API. Designed a composite health score algorithm and a workout readiness predictor with rule-based insight generation and a chat interface architected for LLM drop-in replacement. Shipped a Flutter frontend with 7 screens deployed to Web with iOS/Android ready from a single codebase. Stack: Python 3.12, Flutter/Dart 3, Provider, fl_chart, Syncfusion Charts, Garmin Connect API (OAuth/garth)",
       footerLink: [
@@ -354,7 +354,9 @@ const blogSection = {
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji("I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"),
+  subtitle: emoji(
+    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
+  ),
   talks: [],
   display: false // Set false to hide this section, defaults to true
 };
